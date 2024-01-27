@@ -1,5 +1,5 @@
-# nDFU
-normalised Distance from Unimodality
+# The normalised Distance from Unimodality (nDFU)
+
 
 Please cite this work as:
 ```
