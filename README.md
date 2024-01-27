@@ -11,7 +11,7 @@ Please cite this work as:
 }
 ```
 
-Please consider citing the original DFU article as:
+Please consider citing the original [DFU article](https://github.com/ipavlopoulos/dfu) as:
 ```
 @article{pavlopoulos-likas-2022,
     title = "Distance from Unimodality for the Assessment of Opinion Polarization",
