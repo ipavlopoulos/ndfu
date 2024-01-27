@@ -1,7 +1,7 @@
 # nDFU
 normalised Distance from Unimodality
 
-Please cite as:
+Please cite this work as:
 ```
 @inproceedings{pavlopoulos-likas-ndfu,
   title={Polarized Opinion Detection Improves the Detection of Toxic Language},
