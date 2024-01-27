@@ -1,7 +1,7 @@
 # nDFU
 normalised Distance from Unimodality
 
-Please cite us as:
+Please cite as:
 ```
 @inproceedings{pavlopoulos-likas-ndfu,
   title={Polarized Opinion Detection Improves the Detection of Toxic Language},
@@ -9,6 +9,10 @@ Please cite us as:
   booktitle={Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics},
   year={2024}
 }
+```
+
+Please consider citing the original DFU article as:
+```
 @article{pavlopoulos-likas-2022,
     title = "Distance from Unimodality for the Assessment of Opinion Polarization",
     author = "Pavlopoulos, John  and Likas, Aristidis",
