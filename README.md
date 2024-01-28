@@ -8,6 +8,20 @@ An empirical analysis on three datasets for toxic language detection, shows that
 
 You may find the preprint of this [article in Oper Review](https://openreview.net/pdf?id=DKNaMP33ZL) and you can use the notebook in this repository to reproduce the experiments of the article (the datasets are not shared here, but can be retrieved).
 
+## Installation
+```bash
+>> git clone https://github.com/ipavlopoulos/ndfu.git
+```
+## Usage
+Import the library and use the relative frequencies of the ratings as input:
+```python
+>>> from ndfu.lib pdf, dfu
+>>> rating = (1,1,2,5,5,5)
+>>> x = pdf(rating, range(1,6))
+>>> dfu(x)
+```
+
+## Contributing
 Please cite this work as:
 ```
 @inproceedings{pavlopoulos-likas-ndfu,
@@ -18,7 +32,7 @@ Please cite this work as:
 }
 ```
 
-Please consider citing the original [DFU article](https://link.springer.com/article/10.1007/s12559-022-10088-2) as:
+Consider citing also the original [article](https://link.springer.com/article/10.1007/s12559-022-10088-2) as:
 ```
 @article{pavlopoulos-likas-2022,
     title = "Distance from Unimodality for the Assessment of Opinion Polarization",
