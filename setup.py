@@ -7,5 +7,5 @@ setup(
     author='John Pavlopoulos',
     author_email='annis@aueb.gr',
     url='https://github.com/ipavlopoulos/ndfu',
-    packages=['lib'],
+    packages=['ndfu'],
 )

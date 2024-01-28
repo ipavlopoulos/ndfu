@@ -14,10 +14,11 @@ You may find the preprint of this [article in Oper Review](https://openreview.ne
 ```
 ## Usage
 Import the library and use the relative frequencies of the ratings as input:
+
 ```python
->>> from ndfu.lib pdf, dfu
->>> rating = (1,1,2,5,5,5)
->>> x = pdf(rating, range(1,6))
+>>> from ndfu import *
+>>> rating = (1, 1, 2, 5, 5, 5)
+>>> x = pdf(rating, range(1, 6))
 >>> dfu(x)
 ```
 
