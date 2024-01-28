@@ -8,4 +8,5 @@ setup(
     author_email='annis@aueb.gr',
     url='https://github.com/ipavlopoulos/ndfu',
     packages=['src'],
+    license="MIT"
 )
