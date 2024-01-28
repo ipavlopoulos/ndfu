@@ -10,16 +10,16 @@ You may find the preprint of this [article in Oper Review](https://openreview.ne
 
 ## Installation
 ```bash
->> git clone https://github.com/ipavlopoulos/src.git
+>> git clone https://github.com/ipavlopoulos/ndfu.git
 ```
 ## Usage
 Import the library and use the relative frequencies of the ratings as input:
 
 ```python
->> > from src import *
->> > rating = (1, 1, 2, 5, 5, 5)
->> > x = pdf(rating, range(1, 6))
->> > dfu(x)
+>>> from ndfu.src import *
+>>> rating = (1, 1, 2, 5, 5, 5)
+>>> x = pdf(rating, range(1, 6))
+>>> dfu(x)
 ```
 
 ## Contributing
