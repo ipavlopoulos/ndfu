@@ -6,7 +6,7 @@ This work introduces a normalized version of this measure (nDFU) that leads to b
 
 An empirical analysis on three datasets for toxic language detection, shows that nDFU can be used to model polarized annotations and prevent them from harming the classification performance. Finally, we further exploit nDFU to specify conditions that could explain polarization given a dimension and present text examples that polarized the annotators when the dimension was gender and race.
 
-You may find the preprint of this [article in Oper Review](https://openreview.net/pdf?id=DKNaMP33ZL) and you can use the notebook in this repository to reproduce the experiments of the article (the datasets are not shared here, but can be retrieved).
+You may find the [article in the ACL proceedings](https://aclanthology.org/2024.eacl-long.117/), find an example [here](ndfu_example.ipynb), and reproduce the experiments [here](ndfu_application.ipynb) (please note that datasets must be uploaded externally in the application notebook for licensing issues).
 
 ## Installation
 ```bash
