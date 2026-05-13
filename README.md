@@ -6,7 +6,7 @@ nDFU is useful when annotation distributions should not be collapsed immediately
 
 An empirical analysis on three toxic-language datasets shows how this signal can be used to model polarized annotations and study conditions that may explain them, such as annotator gender or race.
 
-You may find the [article in the ACL proceedings](https://aclanthology.org/2024.eacl-long.117/), find an example [here](ndfu_example.ipynb), and reproduce the experiments [here](ndfu_application.ipynb) (please note that datasets must be uploaded externally in the application notebook for licensing issues).
+You may find the [article in the ACL proceedings](https://aclanthology.org/2024.eacl-long.117/), find an example [here](ndfu_example.ipynb), and reproduce the experiments [here](ndfu_application.ipynb). A more annotated walkthrough of the same application workflow is available [here](ndfu_application_organized.ipynb). Please note that datasets must be uploaded externally in the application notebooks for licensing issues.
 
 ## Installation
 
