@@ -1,29 +1,62 @@
-# The normalised Distance from Unimodality (nDFU)
+# The Normalized Distance from Unimodality (nDFU)
 
-[Distance from unimodality (DFU)](https://github.com/ipavlopoulos/dfu/) has been found to correlate well with human judgment for the assessment of polarized opinions. However, its un-normalized nature makes it less intuitive and somewhat difficult to exploit in machine learning (e.g., as a supervised signal). 
+[Distance from unimodality (DFU)](https://github.com/ipavlopoulos/dfu/) measures how far a distribution is from unimodality. This repository provides a normalized version of that measure (nDFU), along with helper functions for turning ordinal annotations into relative-frequency vectors.
 
-This work introduces a normalized version of this measure (nDFU) that leads to better assessment of the degree of polarization. Part of this work is a methodology for K-class text classification, based on nDFU, that exploits polarized texts in the dataset. Such polarized instances are assigned to a separate K+1 class, so that a K+1-class classifier is trained. 
+nDFU is useful when annotation distributions should not be collapsed immediately into a single majority label. In the accompanying paper, nDFU is used as a signal for identifying non-unimodal annotation patterns and for training a K+1-class classifier, where selected instances are assigned to an additional class instead of being forced into one of the original K classes.
 
-An empirical analysis on three datasets for toxic language detection, shows that nDFU can be used to model polarized annotations and prevent them from harming the classification performance. Finally, we further exploit nDFU to specify conditions that could explain polarization given a dimension and present text examples that polarized the annotators when the dimension was gender and race.
+An empirical analysis on three toxic-language datasets shows how this signal can be used to model polarized annotations and study conditions that may explain them, such as annotator gender or race.
 
 You may find the [article in the ACL proceedings](https://aclanthology.org/2024.eacl-long.117/), find an example [here](ndfu_example.ipynb), and reproduce the experiments [here](ndfu_application.ipynb) (please note that datasets must be uploaded externally in the application notebook for licensing issues).
 
 ## Installation
+
 ```bash
->> git clone https://github.com/ipavlopoulos/ndfu.git
+pip install git+https://github.com/ipavlopoulos/ndfu.git
 ```
+
+For local development:
+
+```bash
+git clone https://github.com/ipavlopoulos/ndfu.git
+cd ndfu
+pip install -e .
+```
+
 ## Usage
+
 Import the library and use the relative frequencies of the ratings as input:
 
 ```python
->>> from ndfu.src import *
+>>> from ndfu import dfu, pdf
 >>> rating = (1, 1, 2, 5, 5, 5)
 >>> x = pdf(rating, range(1, 6))
 >>> dfu(x)
+0.3333333333333333
+```
+
+You can also pass a histogram directly:
+
+```python
+>>> dfu([0.2, 0.6, 0.2])
+0.0
+>>> dfu([0.5, 0.0, 0.5])
+1.0
+```
+
+Older examples that import `from ndfu.src import *` or `from src import *` are still supported for compatibility.
+
+## Development
+
+Run the test suite with:
+
+```bash
+pytest
 ```
 
 ## Contributing
+
 Please cite this work as:
+
 ```
 @inproceedings{pavlopoulos-likas-ndfu,
   title={Polarized Opinion Detection Improves the Detection of Toxic Language},
