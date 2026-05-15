@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="300" viewBox="0 0 980 300" role="img" aria-labelledby="title desc">
+  <title id="title">Workflow for using nDFU on ordinal annotations</title>
+  <desc id="desc">A four-step workflow: collect ordinal annotations, convert them to a histogram, score the histogram with nDFU, and then inspect, stratify, or model high-nDFU examples.</desc>
+  <rect width="980" height="300" fill="#ffffff"/>
+  <style>
+    .box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.2; }
+    .box-focus { fill: #fff7ed; stroke: #f97316; stroke-width: 1.6; }
+    .arrow { stroke: #475569; stroke-width: 2.2; fill: none; marker-end: url(#arrowhead); }
+    .title { font: 800 22px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+    .step { font: 800 16px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+    .body { font: 500 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+    .mono { font: 700 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #0f766e; }
+    .badge { fill: #0f766e; }
+    .badge-text { font: 800 13px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="490" y="44" text-anchor="middle" class="title">Where nDFU fits</text>
+
+  <rect x="42" y="88" width="190" height="132" rx="8" class="box"/>
+  <circle cx="72" cy="116" r="16" class="badge"/>
+  <text x="72" y="121" text-anchor="middle" class="badge-text">1</text>
+  <text x="100" y="121" class="step">Annotations</text>
+  <text x="72" y="152" class="body">Multiple annotators give</text>
+  <text x="72" y="174" class="body">ordinal ratings for the</text>
+  <text x="72" y="196" class="body">same item.</text>
+
+  <rect x="282" y="88" width="190" height="132" rx="8" class="box"/>
+  <circle cx="312" cy="116" r="16" class="badge"/>
+  <text x="312" y="121" text-anchor="middle" class="badge-text">2</text>
+  <text x="340" y="121" class="step">Histogram</text>
+  <text x="312" y="152" class="body">Convert ratings to a</text>
+  <text x="312" y="174" class="body">relative-frequency vector</text>
+  <text x="312" y="196" class="mono">pdf(scores, scale)</text>
+
+  <rect x="522" y="88" width="190" height="132" rx="8" class="box-focus"/>
+  <circle cx="552" cy="116" r="16" class="badge"/>
+  <text x="552" y="121" text-anchor="middle" class="badge-text">3</text>
+  <text x="580" y="121" class="step">nDFU score</text>
+  <text x="552" y="152" class="body">Measure departure from</text>
+  <text x="552" y="174" class="body">a single peak.</text>
+  <text x="552" y="196" class="mono">dfu(hist)</text>
+
+  <rect x="762" y="88" width="176" height="132" rx="8" class="box"/>
+  <circle cx="792" cy="116" r="16" class="badge"/>
+  <text x="792" y="121" text-anchor="middle" class="badge-text">4</text>
+  <text x="820" y="121" class="step">Use signal</text>
+  <text x="792" y="152" class="body">Inspect examples, split</text>
+  <text x="792" y="174" class="body">by subgroup, or train a</text>
+  <text x="792" y="196" class="body">K+1 classifier.</text>
+
+  <path d="M232 154 H272" class="arrow"/>
+  <path d="M472 154 H512" class="arrow"/>
+  <path d="M712 154 H752" class="arrow"/>
+
+  <text x="490" y="258" text-anchor="middle" class="body">High nDFU flags pole-like disagreement; it does not by itself explain what caused the poles.</text>
+</svg>

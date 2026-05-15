@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">Unimodal annotation spread compared with pole-like annotator disagreement</title>
+  <desc id="desc">Two bar charts. The left chart has one central peak and nDFU equals zero. The right chart has two separated peaks with a valley between them and nDFU equals one.</desc>
+  <rect width="980" height="430" fill="#ffffff"/>
+  <style>
+    .panel { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.2; }
+    .axis { stroke: #475569; stroke-width: 1.4; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; }
+    .bar-unimodal { fill: #0f766e; }
+    .bar-pole { fill: #b91c1c; }
+    .bar-muted { fill: #cbd5e1; }
+    .title { font: 700 22px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+    .subtitle { font: 500 15px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+    .label { font: 600 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #334155; }
+    .tick { font: 500 13px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+    .score { font: 800 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+    .note { font: 500 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+  </style>
+
+  <text x="490" y="42" text-anchor="middle" class="title">nDFU separates ordinary spread from structured disagreement</text>
+  <text x="490" y="68" text-anchor="middle" class="subtitle">The metric scores the shape of ordinal annotation histograms: one peak vs. separated poles.</text>
+
+  <rect x="44" y="96" width="424" height="288" rx="8" class="panel"/>
+  <rect x="512" y="96" width="424" height="288" rx="8" class="panel"/>
+
+  <text x="256" y="130" text-anchor="middle" class="title">One shared tendency</text>
+  <text x="256" y="154" text-anchor="middle" class="subtitle">Ratings vary around a single peak</text>
+  <text x="724" y="130" text-anchor="middle" class="title">Separated poles</text>
+  <text x="724" y="154" text-anchor="middle" class="subtitle">Annotators split across the scale</text>
+
+  <!-- Left chart frame -->
+  <line x1="100" y1="326" x2="412" y2="326" class="axis"/>
+  <line x1="100" y1="182" x2="100" y2="326" class="axis"/>
+  <line x1="100" y1="230" x2="412" y2="230" class="grid"/>
+  <line x1="100" y1="278" x2="412" y2="278" class="grid"/>
+
+  <!-- Left chart bars: [0.2, 0.6, 0.2] on scale 1,2,3 -->
+  <rect x="137" y="278" width="52" height="48" rx="3" class="bar-muted"/>
+  <rect x="230" y="182" width="52" height="144" rx="3" class="bar-unimodal"/>
+  <rect x="323" y="278" width="52" height="48" rx="3" class="bar-muted"/>
+
+  <text x="163" y="350" text-anchor="middle" class="tick">low</text>
+  <text x="256" y="350" text-anchor="middle" class="tick">middle</text>
+  <text x="349" y="350" text-anchor="middle" class="tick">high</text>
+  <text x="84" y="190" text-anchor="end" class="tick">more</text>
+  <text x="84" y="326" text-anchor="end" class="tick">fewer</text>
+  <text x="256" y="372" text-anchor="middle" class="label">Ordinal rating</text>
+  <text x="256" y="210" text-anchor="middle" class="score">nDFU = 0.0</text>
+
+  <!-- Right chart frame -->
+  <line x1="568" y1="326" x2="880" y2="326" class="axis"/>
+  <line x1="568" y1="182" x2="568" y2="326" class="axis"/>
+  <line x1="568" y1="230" x2="880" y2="230" class="grid"/>
+  <line x1="568" y1="278" x2="880" y2="278" class="grid"/>
+
+  <!-- Right chart bars: [0.5, 0, 0.5] on scale 1,2,3 -->
+  <rect x="605" y="206" width="52" height="120" rx="3" class="bar-pole"/>
+  <rect x="698" y="326" width="52" height="0" rx="3" class="bar-muted"/>
+  <rect x="791" y="206" width="52" height="120" rx="3" class="bar-pole"/>
+  <path d="M631 196 C670 170, 777 170, 817 196" fill="none" stroke="#b91c1c" stroke-width="2.4" stroke-dasharray="5 6"/>
+  <text x="724" y="185" text-anchor="middle" class="note">valley between poles</text>
+
+  <text x="631" y="350" text-anchor="middle" class="tick">low</text>
+  <text x="724" y="350" text-anchor="middle" class="tick">middle</text>
+  <text x="817" y="350" text-anchor="middle" class="tick">high</text>
+  <text x="552" y="190" text-anchor="end" class="tick">more</text>
+  <text x="552" y="326" text-anchor="end" class="tick">fewer</text>
+  <text x="724" y="372" text-anchor="middle" class="label">Ordinal rating</text>
+  <text x="724" y="238" text-anchor="middle" class="score">nDFU = 1.0</text>
+</svg>
