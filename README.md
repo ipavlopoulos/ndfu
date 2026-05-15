@@ -1,12 +1,12 @@
 # The Normalized Distance from Unimodality (nDFU)
 
-[Distance from unimodality (DFU)](https://github.com/ipavlopoulos/dfu/) measures how far a distribution is from unimodality. This repository provides a normalized version of that measure (nDFU), along with helper functions for turning ordinal annotations into relative-frequency vectors.
+[Distance from unimodality (DFU)](https://github.com/ipavlopoulos/dfu/) measures how far a distribution is from unimodality (or having a single peak). This repository provides a normalized version of that measure (nDFU), along with helper functions for turning ordinal annotations into relative-frequency vectors.
 
 nDFU is useful when annotation distributions should not be collapsed immediately into a single majority label. In the accompanying paper, nDFU is used as a signal for identifying non-unimodal annotation patterns and for training a K+1-class classifier, where selected instances are assigned to an additional class instead of being forced into one of the original K classes.
 
 An empirical analysis on three toxic-language datasets shows how this signal can be used to model polarized annotations and study conditions that may explain them, such as annotator gender or race.
 
-You may find the [article in the ACL proceedings](https://aclanthology.org/2024.eacl-long.117/), find an example [here](ndfu_example.ipynb), and reproduce the experiments [here](ndfu_application.ipynb). A more annotated walkthrough of the same application workflow is available [here](ndfu_application_organized.ipynb). A separate notebook applies nDFU to the POPQUORN Potato-Prolific dataset [here](ndfu_popquorn_application.ipynb). Please note that datasets must be uploaded externally in the original application notebooks for licensing issues.
+You may find the [article in the ACL proceedings](https://aclanthology.org/2024.eacl-long.117/), find an example [here](ndfu_example.ipynb), and reproduce the experiments [here](ndfu_application.ipynb). A separate notebook applies nDFU to the POPQUORN Potato-Prolific dataset [here](ndfu_popquorn_application.ipynb). Please note that datasets must be uploaded externally in the original application notebooks for licensing issues.
 
 ## Installation
 
