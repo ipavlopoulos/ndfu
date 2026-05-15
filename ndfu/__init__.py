@@ -2,7 +2,8 @@
 
 The public API intentionally stays small: use ``pdf`` for ordinal rating
 frequencies, ``cpdf`` for cumulative frequencies, ``to_hist`` for binned
-numeric data, and ``dfu`` for the distance from unimodality.
+numeric data, ``dfu`` for the distance from unimodality, and
+``UnimodalLearner`` for K+1 learning from annotation distributions.
 """
 
 from collections import Counter
@@ -112,4 +113,7 @@ def cpdf(scores, scale=SCALE10):
     return np.cumsum(pdf(scores, scale))
 
 
-__all__ = ["SCALE10", "cpdf", "dfu", "pdf", "to_hist"]
+from .learning import UnimodalLearner
+
+
+__all__ = ["SCALE10", "UnimodalLearner", "cpdf", "dfu", "pdf", "to_hist"]

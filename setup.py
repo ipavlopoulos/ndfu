@@ -6,7 +6,7 @@ long_description = Path("README.md").read_text(encoding="utf-8")
 
 setup(
     name="nDFU",
-    version="0.9.1",
+    version="0.9.2",
     description="Normalized distance from unimodality",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -14,7 +14,7 @@ setup(
     author_email="annis@aueb.gr",
     url="https://github.com/ipavlopoulos/ndfu",
     packages=find_packages(include=["ndfu", "ndfu.*", "src"]),
-    install_requires=["numpy"],
+    install_requires=["numpy", "pandas", "scikit-learn"],
     python_requires=">=3.8",
     classifiers=[
         "Programming Language :: Python :: 3",

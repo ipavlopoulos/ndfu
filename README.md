@@ -55,6 +55,24 @@ You can also pass a histogram directly:
 
 The first histogram has one central peak, so it is unimodal. The second has two separated peaks with a valley between them, so it represents pole-like disagreement.
 
+For modeling, import `UnimodalLearner` to build binary, unimodal-only, and K+1 classifiers from annotation distributions:
+
+```python
+>>> from ndfu import UnimodalLearner
+>>> learner = UnimodalLearner(
+...     train,
+...     dev,
+...     test,
+...     feature_cols=["x1", "x2"],
+...     scores_col="scores",
+...     scale=range(1, 6),
+...     threshold=0.0,
+... )
+>>> learner.fit_binary_baseline()
+>>> learner.fit_unimodal_only_baseline()
+>>> learner.fit_kplus_model()
+```
+
 Older examples that import `from ndfu.src import *` or `from src import *` are still supported for compatibility.
 
 ## Development
