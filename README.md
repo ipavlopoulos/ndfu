@@ -16,7 +16,16 @@ nDFU does not by itself explain why the poles exist. It detects the shape of str
 
 ![A workflow showing ordinal annotations converted to a histogram, scored with nDFU, and then used for inspection, subgroup analysis, or K+1 modeling.](docs/figures/ndfu-workflow.svg)
 
-You may find the [article in the ACL proceedings](https://aclanthology.org/2024.eacl-long.117/), find an example [here](ndfu_example.ipynb), inspect the internal mechanism [here](ndfu_mechanism.ipynb), and study K+1 learning with synthetic data [here](ndfu_synthetic_learning.ipynb). You can reproduce the original experiments [here](ndfu_application.ipynb). A separate notebook applies nDFU to the POPQUORN Potato-Prolific dataset [here](ndfu_popquorn_application.ipynb). Please note that datasets must be uploaded externally in the original application notebooks for licensing issues.
+You may find the [article in the ACL proceedings](https://aclanthology.org/2024.eacl-long.117/). Please note that datasets must be uploaded externally in the original application notebooks for licensing issues.
+
+## Notebooks
+
+- [nDFU example](ndfu_example.ipynb)
+- [nDFU mechanism](ndfu_mechanism.ipynb)
+- [UnimodalLearner tutorial](ndfu_unimodal_learner_tutorial.ipynb)
+- [K+1 learning with synthetic data](ndfu_synthetic_learning.ipynb)
+- [Original experiment reproduction](ndfu_application.ipynb)
+- [POPQUORN Potato-Prolific application](ndfu_popquorn_application.ipynb)
 
 ## Installation
 
